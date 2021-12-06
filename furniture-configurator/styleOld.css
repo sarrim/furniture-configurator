@@ -1,0 +1,310 @@
+*{
+    margin: 0px;
+}
+.containerMain{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: calc(100vh - 80px);    
+    border-top: 1px solid #bbb;
+}
+/* .topbar{
+    background:#FDFEFE;
+    grid-column: 1/4;
+    border-bottom-style:solid;
+    border-width: 1px;
+    border-color: #BFC9CA;
+   
+} */
+nav{
+    height: 80px;
+    background: #f3f3f3;
+    display: grid !important;
+    grid-auto-flow: column !important;
+    justify-content: space-between !important;
+}
+.mainbody{
+    background:#FDFEFE;
+    position: relative;
+}
+.sidebar{
+    background:#EAEDED;
+    padding: 15px;    
+    /* transition: width 2s linear 5s; */
+
+}
+.logo{
+    width: 70%;
+    
+}
+.logoText{
+    font-weight: bold;
+    font-size: 32px;
+    text-align: center;
+}
+.btnHeadings{
+    font-size: 20px !important;
+    color: #000 !important;
+    text-decoration: none !important;
+    width: 100% !important;display: grid !important;justify-content: start !important;
+    outline: none !important;
+    border: none !important;
+    font-weight: bold !important;
+}
+.btn.focus, .btn:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+.card{
+    border-radius: 10px !important;
+}
+.card-header{
+    border-bottom: 0 !important;
+}
+/* progress */
+.customInput-wrap {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  input[type="range"] {
+    width: 100%;
+  }
+  
+  output {
+    position: absolute;
+    top: 0px;
+    left: 91% !important;
+  }
+  /* #rangeMeter{
+      background-color: #dc3545 !important;
+      color: #dc3545 !important;
+      border:#dc3545 !important;
+      height: 12px !important;
+  } */
+  /* color of range ball */
+  /* input[type="range"]::-moz-range-thumb {
+    background-image: linear-gradient(to bottom, #ADD978 0, #ADD978 100%);
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    background-image: linear-gradient(to bottom, #ADD978 0, #83B348 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ADD978), color-stop(100%, #83B348));
+    background-image: -webkit-linear-gradient(top, #ADD978 0, #83B348 100%);
+  }
+  
+  input[type="range"]::-ms-thumb {
+    background-image: linear-gradient(to bottom, #ADD978 0, #83B348 100%);
+  } */
+  /*Chrome*/
+     /* input[type='range'] {
+      overflow: hidden;
+      -webkit-appearance: none;
+    } */
+    /*
+    input[type='range']::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      margin-top: -1px;
+    } */
+    /* 
+    input[type='range']::-webkit-slider-thumb {
+      width: 10px;
+      -webkit-appearance: none;
+      height: 10px;
+      cursor: ew-resize;
+    } */
+
+/* colors */
+.colorsRow{
+    /* display: grid;
+    grid-auto-flow: column; */
+    /* grid-gap: 10px; */
+    gap: 20px;
+    margin-top: 10px;
+    margin: 0 auto !important;
+    margin-bottom: 5px !important;
+}
+.colors{
+    height: 60px !important;
+    width: 60px !important;
+    margin-top: 10px !important;
+    border-radius: 7px;
+    position: relative !important;
+}
+.colorsRow2{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+.colorsRow1 .colors{
+    background-color: #BFC9CA;
+}
+#tableFrontColor1{
+    background-image: url('./three.jpg');
+}
+#tableFrontColor2{
+    background-image: url('./two.jpg');
+}   
+#tableFrontColor3{
+    background-image: url('./four.jpg');
+}   
+#tableFrontColor4{
+    background-image: url('./one.jpg');
+}   
+
+/* .colorsRow2 .colors{
+    background-color: slategray;
+} */
+/* .colorsRow3 .colors{
+    background-color: #dc3545;
+}
+.colorsRow4 .colors{
+    background-color: aquamarine;
+}
+.colorsRow5 .colors{
+    background-color: chocolate;
+} */
+#drawercolor1,#Drawerfrontcolor1,#screencolor1{
+    background-color: #93999D;
+}
+#drawercolor2,#Drawerfrontcolor2,#screencolor2{
+    background-color: #000000;
+}
+#drawercolor3,#Drawerfrontcolor3,#screencolor3{
+    background-color: #EEB851;
+}
+#drawercolor4,#Drawerfrontcolor4,#screencolor4{
+    background-color: #CCB393;
+}
+#drawercolor5,#Drawerfrontcolor5,#screencolor5{
+    background-color: #85A74B;
+}
+#pillerColor1{
+    background-color: #515A5A;
+}
+#pillerColor2{
+    background-color: #000000;
+}
+#pillerColor3{
+    background-color: #CCB393;
+}
+#pillerColor4{
+    background-color: #B86A45;
+}
+#pillerColor5{
+    background-color: #FFFFFF;
+    border: 1px solid #f2f2f2;
+}
+.card-body > p{
+    font-weight: bold;
+    margin-bottom: 0 !important;
+}
+.tickMark{
+    width:18px;width: 18px;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: none;
+}
+.tickmarkActive{
+    display: block;
+}
+.attachBtnsRow{
+    display: grid !important;
+    grid-template-columns: repeat(2,1fr);   
+    grid-gap: 10px;
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+    
+}
+.cart:hover{
+    color: #23272b !important;
+}
+#exitFullScreenBtn{
+    /* position: absolute;top: 0;right: 0; */
+    display:none;font-size: 36px;font-size:35px;cursor: pointer;
+}
+#fullScreenBtn{
+    /* position: absolute;top: 45%;left: 0; */
+    font-size:35px;cursor: pointer;
+}
+#exitFullScreenBtn:hover{
+    font-size: 35px;transition: 0.2s linear;
+}
+#scale{
+    /* position: absolute !important; */
+    top: 50%;
+    cursor: pointer;
+}
+
+/* For mobile responsiveness */
+
+@media(max-width:568px){
+    .containerMain{
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+    .mainbody{
+        height: 550px;
+    }
+    #scale{
+        position: absolute !important;
+        top: 55% !important;
+        cursor: pointer;
+    }
+    .cart{
+        margin-right: 10px !important;
+    }
+    .sidebar{
+        padding: 0 !important;
+    }
+    .btn{
+        font-size: 13px !important;
+    }
+    .btnHeadings{
+        font-size: 15px !important;
+    }
+    .colors{
+        width: 45px !important;
+        height: 45px !important;
+    }
+    .fulScrnMobile{
+        height: calc(100vh - 87px);
+    }
+}
+/* For Tablet responsiveness */
+@media(min-width:768px) and (max-width:1100px){
+    .containerMain{
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+    .cart{
+        margin-right: 20px !important;
+    }
+    .mainbody{
+        height: 650px;
+    }
+    #scale{
+        position: absolute !important;
+        top: 55% !important;
+        cursor: pointer;
+    }
+    .sidebar{
+        padding: 0 !important;
+    }
+}
+.iframeBtns{
+    width: 50px;
+    height: 200px;
+    top: 40%;
+    display: grid;
+    justify-content: center;
+    padding: 40px 0px;
+    position: absolute;
+    background: #fff;
+    left: 7px;
+}
+/*  */
+/* .colorsRow3,.colorsRow4,.colorsRow5,.colorsRow3Para,.colorsRow4Para,.colorsRow5Para{
+    display: none;
+} */

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Furniture Configurator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <div>
+     <a class="navbar-brand" href="#">Furniture Configurator</a>
+   </div>
+   <div>
+    <i class="fa fa-shopping-cart cart" style="font-size: 48px;
+    color: #343a40;
+    margin-right: 80px;"></i>
+   </div>
+   
+    </nav>
+
+    <div class="containerMain ">
+       
+        <div class="mainbody">
+          <iframe class="iframeDiv" id="app" src="https://playcanv.as/e/p/kylwK2B5/" width="100%" height="100%" frameborder="0"></iframe>
+          <div class="iframeBtns">            
+              <!-- using material icons -->
+              <div style="padding: 6px 0;">
+                <span id="fullScreenBtn" class="material-icons">
+                                fullscreen
+                                </span>
+                </div>
+              <div style="padding: 6px 0;">
+              <span id="exitFullScreenBtn" class="material-icons">
+                fullscreen_exit
+                </span>
+              </div>
+              <div style="padding: 6px 0;">
+                <img id="scale" src="./scale.png" alt="" width="35" height="35">
+          </div>
+        </div>
+        </div>
+        <div class="sidebar">
+          <div> 
+          <!-- <img  class="logo" src="logo.png" alt="customizer"> -->
+          <!-- <p class="logoText">Furniture Customization</p> -->
+          </div>  
+          
+                <div class="accordionStart">
+                  <div class="accordion" id="exampleAccordion">
+                    <div class="card">
+                      <div class="card-header" id="exItem1Header">
+                        
+                        <button class="btn btn-link btnHeadings" type="button" data-toggle="collapse" data-target="#exItem1" aria-expanded="true" aria-controls="exItem1">Size
+
+                        </button>
+                      </div>
+                      <div id="exItem1" class="collapse show" aria-labelledby="exItem1Header" data-parent="#exampleAccordion">
+                        <div class="card-body">
+                        <p style="margin-bottom: 1rem !important;">Fixed Width</p>
+                        <button type="button" class="btn btn-dark widthBtns" id="widthBtn1">50 inch</button>
+                        <button type="button" class="btn btn-dark widthBtns" id="widthBtn2">60 inch</button>
+                        <button type="button" class="btn btn-dark widthBtns" id="widthBtn3">70 inch</button>
+                        <button type="button" class="btn btn-dark widthBtns" id="widthBtn4">80 inch</button>
+                        </div>
+                        <!--  -->
+                        <!-- <div class="customInput-wrap">
+                          <p>Custom Width</p>
+                          <input type="range" id="rangeMeter" class="progress-bar-striped bg-dark" name="rangeInput" min="140" max="200" onchange="customRange();" value="140" />
+                          <output id="rangeValue">140</output>
+                        </div> -->
+                        <!--  -->
+                      </div>
+                      
+                    </div>
+                
+                    <div class="card">
+                      <div class="card-header" id="exItem2Header">
+                          <button class="btn btn-link btnHeadings" type="button" data-toggle="collapse" data-target="#exItem2" aria-expanded="true" aria-controls="exItem2">Attachments</button>
+                      </div>
+                      <div id="exItem2" class="collapse" aria-labelledby="exItem2Header" data-parent="#exampleAccordion">
+                        <div class="card-body">
+                          <div class="row attachBtnsRow">
+                          <button type="button" class="btn btn-dark attachBtns drawerBtns" id="fiveDrawerBtn">Five drawer</button>
+                          <button type="button" class="btn btn-dark attachBtns drawerBtns" id="fourDrawerBtn">Four drawer</button>
+                          </div>
+                          <div class="row attachBtnsRow">
+                          <button type="button" class="btn btn-dark attachBtns drawerBtns" id="threeDrawerBtn" >Three drawer</button>
+                          <button type="button" class="btn btn-dark attachBtns drawerBtns" id="twoDrawerBtn">Two drawer</button>
+                        
+                          </div>
+                          <div class="row attachBtnsRow">
+                          <button type="button" class="btn btn-dark attachBtns otherAttachBtns" id="computerStandBtn">Computer Stand </button>
+                          <button type="button" class="btn btn-dark attachBtns otherAttachBtns" id="bookShelfBtn" >Book Shelf</button>                          
+                          </div>
+                          <div class="row attachBtnsRow">
+                          <button type="button" class="btn btn-dark attachBtns screenBtn" id="tableScreenBtn">Table Screen</button>
+                          <button type="button" class="btn btn-dark attachBtns otherAttachBtns" id="wireCapsBtn">Wire Caps</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <div class="card">
+                      <div class="card-header" id="exItem3Header">
+                          <button class="btn btn-link collapsed btnHeadings" type="button" data-toggle="collapse" data-target="#exItem3" aria-expanded="false" aria-controls="exItem3" id="colorTab">Color</button>
+                      </div>
+                      <div id="exItem3" class="collapse" aria-labelledby="exItem3Header" data-parent="#exampleAccordion">
+                        <div class="card-body">
+                          <p>Piller Color</p>
+                          <div class="row colorsRow1 colorsRow">
+                            <div class="row1Col1 colors colorRow1" id="pillerColor1">    
+                              <img class="tickMark  tickRow1" id="tick1" src="/tick.svg" alt="">                          
+                            </div>
+                            <!-- <div class="row1Col2 colors colorRow1" id="pillerColor2">
+                              <img class="tickMark  tickRow1" id="tick2" src="/tick.svg" alt="">                              
+                            </div>
+                            <div class="row1Col3 colors colorRow1" id="pillerColor3">
+                              <img class="tickMark  tickRow1" id="tick3" src="/tick.svg" alt="">                              
+                            </div>
+                            <div class="row1Col4 colors colorRow1" id="pillerColor4">
+                              <img class="tickMark  tickRow1" id="tick4" src="/tick.svg" alt=""> 
+                            </div>
+                            <div class="row1Col5 colors colorRow1" id="pillerColor5">
+                              <img class="tickMark  tickRow1" id="tick5" src="/tick.svg" alt="">                              
+                            </div> -->
+                          </div>
+                        <!--  -->
+                        <p>Table Front Color</p>
+                        <div class="row colorsRow2 colorsRow">
+                          <div class="row2Col1 colors colorRow2" id="tableFrontColor1">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row2Col2 colors colorRow2" id="tableFrontColor2">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row2Col3 colors colorRow2" id="tableFrontColor3">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row2Col4 colors colorRow2" id="tableFrontColor4">
+                            <img class="tickMark" src="/tick.svg" alt=""> 
+                          </div>
+                          <!-- <div class="row2Col5 colors colorRow2" id="tableFrontColor5">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div> -->
+                        </div>
+                        <!--  -->
+                        <p class="colorsRow3 d-none">Drawer Color</p>
+                        <div class="row colorsRow3 d-none colorsRow">
+                          <div class="row3Col1 colors colorRow3" id="drawercolor1">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row3Col2 colors colorRow3" id="drawercolor2">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row3Col3 colors colorRow3" id="drawercolor3">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row3Col4 colors colorRow3" id="drawercolor4">
+                            <img class="tickMark" src="/tick.svg" alt=""> 
+                          </div>
+                          <div class="row3Col5 colors colorRow3" id="drawercolor5">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                        </div>
+                        <!--  -->
+                        <p class="colorsRow4 d-none">Drawer Front Color</p>
+                        <div class="row colorsRow4 d-none colorsRow">
+                          <div class="row4Col1 colors colorRow4" id="Drawerfrontcolor1">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row4Col2 colors colorRow4" id="Drawerfrontcolor2">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row4Col3 colors colorRow4" id="Drawerfrontcolor3">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row4Col4 colors colorRow4" id="Drawerfrontcolor4">
+                            <img class="tickMark" src="/tick.svg" alt=""> 
+                          </div>
+                          <div class="row4Col5 colors colorRow4" id="Drawerfrontcolor5">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                        </div>
+                        <!--  -->
+                        <p class="colorsRow5 d-none">Screen Color</p>
+                         <div class="row colorsRow5 d-none colorsRow">
+                          <div class="row5Col1 colors colorRow5" id="screencolor1">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row5Col2 colors colorRow5" id="screencolor2">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row5Col3 colors colorRow5" id="screencolor3">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                          <div class="row5Col4 colors colorRow5" id="screencolor4">
+                            <img class="tickMark" src="/tick.svg" alt=""> 
+                          </div>
+                          <div class="row5Col5 colors colorRow5" id="screencolor5">
+                            <img class="tickMark" src="/tick.svg" alt="">                              
+                          </div>
+                        </div>
+                        <!--  -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="progress.js"></script>
+</body>
+</html>
