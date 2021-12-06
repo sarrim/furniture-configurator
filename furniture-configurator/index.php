@@ -81,7 +81,7 @@
         <!--  <span class="button-text">Generate PDF</span>-->
         <!--</button>-->
         
-        <button class="c-button c-button--gooey pdfbutton"> Generate PDF
+        <button class="c-button c-button--gooey pdfbutton" id="generatePDF"> Generate PDF
           <div class="c-button__blobs">
           <div></div>
           <div></div>
@@ -352,9 +352,58 @@
               
         </div>
     </div>
+
+    <div style="display: none;" id="pdfDiv">
+      <p>Image One:</p>
+      <img style="width:80%" id="img1" alt="img1">
+      <br>
+      <p>Image Two:</p>
+      <img style="width:80%" id="img2" alt="img2">
+      <br>
+      <p>Image Three:</p>
+      <img style="width:80%" id="img3" alt="img3">
+    </div>
     
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
 <script src="progress.js"></script>
+<script src="pdfScript.js"></script>
+<script src="html2pdf.js"></script>
 </body>
 </html>
+
+<script>
+//   const img1 = document.querySelector("#img1");
+//   const img2 = document.querySelector("#img2");
+//   const img3 = document.querySelector("#img3");
+// window.onmessage = (event) => {
+
+// if(event.data.substring(0,6)=='image1'){
+//   var str1 = event.data.replace('image1','');
+//   // img1.setAttribute('src', str1);
+//   img1.setAttribute('src', str1);
+// //   console.log(str1);
+// }
+// else if(event.data.substring(0,6)=='image2'){
+//   // console.log('image 2 arahi');
+//   var str2 = event.data.replace('image2','');
+//   img2.setAttribute('src', str2);
+// //   console.log(str2);
+// }
+// else if(event.data.substring(0,6)=='image3'){
+//   // console.log('image 3 arahi');
+//   var str3 = event.data.replace('image3','');
+// //   console.log(str3);
+//   img3.setAttribute('src', str3);
+// }
+//    if (event.data.substring(0,14)=='app:image1') {
+//     let baseImg = event.data.replace('app:image1','test');
+//     console.log(baseImg);
+//     }
+
+// Choose the element that our invoice is rendered in.
+// Choose the element and save the PDF for our user.
+// element.style.display = 'none';
+
+// };
+</script>
