@@ -22,7 +22,7 @@ function generatePDF() {
         console.log(event.data);
         if(event.data.substring(0,6)=='image1'){
 
-          globalThis.str1 = event.data.replace('image1','');
+          str1 = event.data.replace('image1','');
           img1.setAttribute('src', str1);
           console.log(img1);
         }
@@ -37,16 +37,21 @@ function generatePDF() {
           var str3 = event.data.replace('image3','');
         //   console.log(str3);
           img3.setAttribute('src', str3);
-          setTimeout(function(){ 
+          setTimeout(function(){
             var element = document.getElementById('pdfDiv');
-            element.style.display = 'block';
-            html2pdf().from(element).save();
+            var clonedElement = element.cloneNode(true);
+            // document.body.style.opacity = 0.5;
+            clonedElement.style.display = 'block';
+            html2pdf().from(clonedElement).save();
             
           }, 1000);
+
+          clonedElement.remove();
           
-          // element.style.display = 'none';
         }
-      //    if (event.data.substring(0,14)=='app:image1') {
+        // location.reload();
+        
+        //    if (event.data.substring(0,14)=='app:image1') {
       //     let baseImg = event.data.replace('app:image1','test');
       //     console.log(baseImg);
       //     }
@@ -57,38 +62,43 @@ function generatePDF() {
      
     }
 
-    // hideDiv()    
-      // setTimeout(function(){
-      //   location.reload();
-      // }, 2000);
-  }
+    //     
+    reload()
 
+    
+  }
+  
+  function reload(){
+    setTimeout(function (){
+      location.reload();
+    }, 6000);
+  }
   // document.getElementById("req").innerHTML = '';
 
-// function hideDiv(){
-//   setTimeout(function(){ 
-//     var element = document.getElementById('pdfDiv');
-//     element.style.visibility = 'hidden';
-//     element.style.overflow = 'none';
-//     element.style.display = 'none';
-//     // html2pdf().from(element).save();
+function hideDiv(){
+  setTimeout(function(){ 
+    var element = document.getElementById('pdfDiv');
+    element.style.visibility = 'hidden';
+    element.style.overflow = 'none';
+    element.style.display = 'none';
+    // html2pdf().from(element).save();
     
-//   }, 500);    
-// }
+  }, 500);    
+}
 
 // console.log("ye he ", element)
 // element.style.display = 'none'
 
 // console.log('yes ')
-console.log(pdfbutton)
-var pdfbutton = document.querySelectorAll('.pdfbutton');
-var pdfDiv1 = document.querySelector('.pdfDiv1');
-var pdfDiv = document.querySelector('.pdfDiv');
-pdfbutton.forEach((item)=>{
-  item.addEventListener('click',()=>{
-    console.log("acha")
-    generatePDF()
-    // pdfDiv.style.display = 'none'
-    pdfDiv.setProperty("display", "none", "important");
-  })
-})
+// console.log(pdfbutton)
+// var pdfbutton = document.querySelectorAll('.pdfbutton');
+// var pdfDiv1 = document.querySelector('.pdfDiv1');
+// var pdfDiv = document.querySelector('.pdfDiv');
+// pdfbutton.forEach((item)=>{
+//   item.addEventListener('click',()=>{
+//     console.log("acha")
+//     generatePDF()
+//     // pdfDiv.style.display = 'none'
+//     pdfDiv.setProperty("display", "none", "important");
+//   })
+// })

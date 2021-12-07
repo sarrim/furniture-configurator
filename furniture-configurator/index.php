@@ -354,15 +354,8 @@
     </div>
 
     <div>
-      
-    <button class="c-button c-button--gooey pdfbutton" style="display: none;"> Generate PDF
-        <div class="c-button__blobs">
-        <div></div>
-        <div></div>
-        <div></div>
-        </div>
-      </button>
-    <div style="display: none;" class="pdfDiv1" id="pdfDiv">
+
+    <div style="display: none;" id="pdfDiv">
         <p style="text-align: center;">Furniture Configuration Description with Images & Total Price </p>
         <br>
           <p>Size: <b><span id="furnitureSize"> 60 Inch</span></b></p>
