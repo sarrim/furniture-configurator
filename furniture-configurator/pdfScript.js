@@ -14,6 +14,7 @@ if(pdfBtn){
 
 function generatePDF() {
   var img1 = document.querySelector("#img1");
+  console.log()
   var img2 = document.querySelector("#img2");
   var img3 = document.querySelector("#img3");
     window.onmessage = (event) => {
@@ -53,13 +54,41 @@ function generatePDF() {
       // Choose the element that our invoice is rendered in.
       // Choose the element and save the PDF for our user.
       // element.style.display = 'none';
-      
+     
     }
 
-    
-    
-    
+    // hideDiv()    
+      // setTimeout(function(){
+      //   location.reload();
+      // }, 2000);
+  }
 
-}
+  // document.getElementById("req").innerHTML = '';
+
+// function hideDiv(){
+//   setTimeout(function(){ 
+//     var element = document.getElementById('pdfDiv');
+//     element.style.visibility = 'hidden';
+//     element.style.overflow = 'none';
+//     element.style.display = 'none';
+//     // html2pdf().from(element).save();
+    
+//   }, 500);    
+// }
+
 // console.log("ye he ", element)
-element.style.display = 'none'
+// element.style.display = 'none'
+
+// console.log('yes ')
+console.log(pdfbutton)
+var pdfbutton = document.querySelectorAll('.pdfbutton');
+var pdfDiv1 = document.querySelector('.pdfDiv1');
+var pdfDiv = document.querySelector('.pdfDiv');
+pdfbutton.forEach((item)=>{
+  item.addEventListener('click',()=>{
+    console.log("acha")
+    generatePDF()
+    // pdfDiv.style.display = 'none'
+    pdfDiv.setProperty("display", "none", "important");
+  })
+})

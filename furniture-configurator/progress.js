@@ -243,6 +243,7 @@ function updatePrice()
 {
     totalPrice = (parseInt(sizePrice) + parseInt(drawerPriceRight) + parseInt(drawerPriceLeft) + parseInt(standPriceRight) + parseInt(standPriceLeft) + parseInt(shelfPriceRight) + parseInt(shelfPriceLeft) + parseInt(screenPrice) + parseInt(capPriceRight) + parseInt(capPriceCenter) + parseInt(capPriceLeft) + parseInt(pillerColor) + parseInt(tableFront) + parseInt(drawerColor) + parseInt(drawerFront) + parseInt(screenColor) + parseInt(leg1) + parseInt(leg2) + parseInt(leg3) );
     $("#totalCalculation").html( "$ "+totalPrice);
+    $("#furniturePrice").html("$ "+totalPrice);
     console.log(totalPrice);
 }
 
@@ -251,6 +252,7 @@ updatePrice()
 $(".widthBtns").on('click', function(){
     var classList = ($(this).prop('classList'));
     globalThis.sizePrice = classList[3];
+    document.getElementById('furnitureSize').innerHTML = sizePrice+' Inch';
     updatePrice(sizePrice);
 })
 
@@ -376,131 +378,173 @@ window.onmessage = function(event) {
     else if(event.data == 'DrawerRightLggaya'){
         drawerPriceRight = 100;
         // totalPrice+=drawerPriceRight;
+        document.getElementById('furnitureAttachmentRight').innerHTML = 'Drawer';
         updatePrice()
         $("#totalCalculation").html( "$ "+ totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
        
     }
     else if(event.data == 'DrawerLeftLggaya'){
         drawerPriceLeft = 100
         // totalPrice+=drawerPriceLeft;
+        document.getElementById('furnitureAttachmentLeft').innerHTML = 'Drawer';
         updatePrice()
         $("#totalCalculation").html( "$ "+ totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'computerRightlaggaya'){
         standPriceRight = 50
         // totalPrice+=standPriceRight;
+        document.getElementById('furnitureAttachmentRight').innerHTML = 'Computer Stand';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'computerLeftlaggaya'){
         standPriceLeft = 50
         // totalPrice+=standPriceLeft;
+        document.getElementById('furnitureAttachmentLeft').innerHTML = 'Computer Stand';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'bookshelfrightlgaya'){
         shelfPriceRight = 40
         // totalPrice+=shelfPriceRight;
+        document.getElementById('furnitureAttachmentRight').innerHTML = 'Book Shelf';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'bookshelfleftgaya'){
         shelfPriceLeft = 40
         // totalPrice+=shelfPriceLeft;
+        document.getElementById('furnitureAttachmentLeft').innerHTML = 'Book Shelf';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'WireCaprightlggaya'){
         capPriceRight = 20
         // totalPrice+=capPriceRight;
+        document.getElementById('furnitureWireCap').innerHTML = 'Wire Cap Right, ';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'WireCapcenterlggaya'){
         capPriceCenter = 20
         // totalPrice+=capPriceCenter;
+        document.getElementById('furnitureWireCap').append('Wire Cap Center, ');
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'WireCapleftlggaya'){
         capPriceLeft = 20
         // totalPrice+=capPriceLeft;
+        document.getElementById('furnitureWireCap').append('Wire Cap Left, ');
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'roundpiller'){
         leg1 = 5;
         leg2=0;
         leg3=0
+        document.getElementById('furnitureLegs').innerHTML = 'Round';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'fourpiller'){
         leg1 = 0;
         leg2=10;
         leg3=0
+        document.getElementById('furnitureLegs').innerHTML = 'Four Piller';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'xpiller'){
         leg1 = 0;
         leg2=0;
         leg3=15
+        document.getElementById('furnitureLegs').innerHTML = 'Cross';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     
     // calculations for minus / delete
     else if(event.data == 'Complete_DrawersRightdelete'){
         drawerPriceRight=0
+        document.getElementById('furnitureAttachmentRight').innerHTML = '';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'Complete_Drawersleftdelete'){
         drawerPriceLeft=0
         updatePrice()
+        document.getElementById('furnitureAttachmentLeft').innerHTML = '';
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'Side RackRightdelete'){
         // totalPrice-=50;
         standPriceRight = 0
+        document.getElementById('furnitureAttachmentRight').innerHTML = '';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'Side Rackleftdelete'){
         // totalPrice-=50;
         standPriceLeft = 0
+        document.getElementById('furnitureAttachmentLeft').innerHTML = '';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'Side Rack (Bookshelf)Rightdelete'){
         // totalPrice-=40;
         shelfPriceRight = 0;
+        document.getElementById('furnitureAttachmentRight').innerHTML = '';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'Side Rack (Bookshelf)leftdelete'){
         // totalPrice-=40;
         shelfPriceLeft = 0;
+        document.getElementById('furnitureAttachmentLeft').innerHTML = '';
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
     }
     else if(event.data == 'wirecaprightdelete'){
         capPriceRight = 0;
+        document.getElementById('furnitureWireCap').replace('Wire Cap Right', '');
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
         
     }
     else if(event.data == 'wirecapcenterdelete'){
         capPriceCenter = 0;
+        document.getElementById('furnitureWireCap').replace('Wire Cap Center', '');
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
         
     }
     else if(event.data == 'wirecapleftdelete'){
         capPriceLeft = 0;
+        document.getElementById('furnitureWireCap').replace('Wire Cap Left', '');
         updatePrice()
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
         
     }
     else if(event.data == 'DrawerRight'){
@@ -517,6 +561,7 @@ window.onmessage = function(event) {
 }
 
         $("#totalCalculation").html( "$ "+totalPrice);
+        $("#furniturePrice").html("$ "+totalPrice);
 var selectAttach = document.getElementById('selectAttach');
 function myFunction() {
   var x = document.getElementById("mySelect").value;

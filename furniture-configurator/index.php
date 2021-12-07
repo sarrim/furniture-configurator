@@ -353,16 +353,41 @@
         </div>
     </div>
 
-    <div style="display: none;" id="pdfDiv">
-      <p>Image One:</p>
-      <img style="width:80%" id="img1" alt="img1">
-      <br>
-      <p>Image Two:</p>
-      <img style="width:80%" id="img2" alt="img2">
-      <br>
-      <p>Image Three:</p>
-      <img style="width:80%" id="img3" alt="img3">
-    </div>
+    <div>
+      
+    <button class="c-button c-button--gooey pdfbutton" style="display: none;"> Generate PDF
+        <div class="c-button__blobs">
+        <div></div>
+        <div></div>
+        <div></div>
+        </div>
+      </button>
+    <div style="display: none;" class="pdfDiv1" id="pdfDiv">
+        <p style="text-align: center;">Furniture Configuration Description with Images & Total Price </p>
+        <br>
+          <p>Size: <b><span id="furnitureSize"> 60 Inch</span></b></p>
+          <p>Attachment (Left): <b><span id="furnitureAttachmentLeft"></span></b></p>
+          <p>Attachment (Right): <b><span id="furnitureAttachmentRight"></span></b></p>
+          <!-- <p>Color: <span id="furnitureColor"></span></p> -->
+          <p>Other: <b><span id="furnitureWireCap"></span> &nbsp; &nbsp; <span id="furnitureLegs">Fixed Legs</span></b></p>
+          <br>
+          
+          <p>Total: <b><span id="furniturePrice"></span> </b></p>
+    
+        <br>
+          <p>Image One:</p>
+          <img style="width:80%" id="img1" alt="img1">
+          <br>
+          <p>Image Two:</p>
+          <img style="width:80%" id="img2" alt="img2">
+          <br>
+          <p>Image Three:</p>
+          <img style="width:80%" id="img3" alt="img3">
+          
+        </div>
+        <script src="./pdfScript.js"></script>
+
+  </div>
     
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
